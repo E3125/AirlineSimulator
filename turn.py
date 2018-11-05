@@ -28,15 +28,20 @@ class SeatClass:
         self.cost = new_price
 
 class Airport:
-    def __init__(self, name, code, num_gates, num_citizens, lat, long):
+    def __init__(self, name, code, num_gates, num_citizens, lat, long, popularity):
         self.name = name
         self.code = code
         self.num_gates = num_gates
         self.citizens = num_citizens
         self.lat = lat
         self.long = longatude
+        self.popularity = popularity
 
-class Citizen:
-    pass
+class Route:
+    def __init__(self, origin, destination, depart_time, arrive_time):
+        self.origin = origin
+        self.destination = destination
+        self.depart_time =depart_time
+        self.arrive_time = arrive_time
 
 
