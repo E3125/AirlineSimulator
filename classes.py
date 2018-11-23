@@ -13,6 +13,11 @@ class AirplaneModel:
         self.altitude = cruising_altitude
         self.speed = speed
 
+class Location:
+    def __init__(self, latitude = 0, longitude = 0):
+        self.lat = latitude
+        self.long = longitude
+
 class Airplane:
     def __init__(self, model: AirplaneModel, l_classes):
         self.model: AirplaneModel = model
@@ -28,13 +33,12 @@ class SeatClass:
         self.cost = new_price
 
 class Airport:
-    def __init__(self, name, code, num_gates, num_citizens, lat, long, popularity):
+    def __init__(self, name, code, num_gates, num_citizens, location, popularity = 1.0):
         self.name = name
         self.code = code
         self.num_gates = num_gates
         self.citizens = num_citizens
-        self.lat = lat
-        self.long = longatude
+        self.loc = location
         self.popularity = popularity
 
 class Route:
@@ -43,5 +47,6 @@ class Route:
         self.destination = destination
         self.depart_time =depart_time
         self.arrive_time = arrive_time
+
 
 
